@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Enums;
+namespace Daypag\Enums;
 /**
  * Tipo da Consulta = “S” – Simples ou “D” –
  * Detalhada (Na consulta do Tipo S-Simples o

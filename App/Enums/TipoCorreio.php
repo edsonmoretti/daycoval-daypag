@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Enums;
+namespace Daypag\Enums;
 /**
  * TipoCorreio Sendo: 1 – Obrigatório; 2- Não
  * pode receber em casa; 3 - Opcional

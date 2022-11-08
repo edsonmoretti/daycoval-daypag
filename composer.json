@@ -1,7 +1,6 @@
 {
   "name": "edsonmoretti/daycoval-daypag",
   "description": "Projeto para comunicação com API DayPag do Banco Daycoval para consulta de débitos.",
-  "version": "1.0.0",
   "keywords": [
     "daycoval",
     "débitos",
@@ -16,7 +15,7 @@
   },
   "autoload": {
     "psr-4": {
-      "App\\": "App/"
+      "Daypag\\": "App/"
     },
     "files": [
       "App/helpers/helpers.php"

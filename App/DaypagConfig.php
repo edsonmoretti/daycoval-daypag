@@ -1,10 +1,10 @@
 <?php
 
-namespace App;
+namespace Daypag;
 
-use App\Enums\Ambiente;
-use App\Enums\FormaPagamento;
-use App\Enums\VersaoApi;
+use Daypag\Enums\Ambiente;
+use Daypag\Enums\FormaPagamento;
+use Daypag\Enums\VersaoApi;
 
 class DaypagConfig
 {

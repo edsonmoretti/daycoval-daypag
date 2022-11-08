@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Objects\Parametros;
+namespace Daypag\Objects\Parametros;
 
-use App\Enums\CodServico;
-use App\Enums\TipoConsulta;
-use App\Exceptions\DaypagException;
+use Daypag\Enums\CodServico;
+use Daypag\Enums\TipoConsulta;
+use Daypag\Exceptions\DaypagException;
 
 class ParametrosTaxasDetran extends ParametrosConsultaDaypag
 {

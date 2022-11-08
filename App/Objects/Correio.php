@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Objects;
+namespace Daypag\Objects;
 
-use App\Enums\TipoCorreio;
+use Daypag\Enums\TipoCorreio;
 
 class Correio
 {

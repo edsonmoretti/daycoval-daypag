@@ -1,14 +1,14 @@
 <?php
 
-namespace App\Objects;
+namespace Daypag\Objects;
 
-use App\Enums\CodServico;
-use App\Enums\CotaDpvat;
-use App\Enums\CotaIpva;
-use App\Enums\TipoConsulta;
-use App\Enums\TipoCorreio;
-use App\Enums\TipoRetorno;
-use App\Enums\TipoVeiculo;
+use Daypag\Enums\CodServico;
+use Daypag\Enums\CotaDpvat;
+use Daypag\Enums\CotaIpva;
+use Daypag\Enums\TipoConsulta;
+use Daypag\Enums\TipoCorreio;
+use Daypag\Enums\TipoRetorno;
+use Daypag\Enums\TipoVeiculo;
 
 class DebitoResult
 {

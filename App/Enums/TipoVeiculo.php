@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Enums;
+namespace Daypag\Enums;
 /**
  * Identificação do DPVAT: 1-Oficial; 2-
  * Particular/Outros

@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Objects;
+namespace Daypag\Objects;
 
-use App\Enums\TipoRetorno;
+use Daypag\Enums\TipoRetorno;
 
 class Retorno
 {

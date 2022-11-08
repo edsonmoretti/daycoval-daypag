@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Objects;
+namespace Daypag\Objects;
 
-use App\Enums\CotaDpvat;
-use App\Enums\TipoVeiculo;
+use Daypag\Enums\CotaDpvat;
+use Daypag\Enums\TipoVeiculo;
 
 class Dpvat
 {

@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Objects\Parametros;
+namespace Daypag\Objects\Parametros;
 
-use App\Enums\CodServico;
-use App\Enums\TipoConsulta;
+use Daypag\Enums\CodServico;
+use Daypag\Enums\TipoConsulta;
 
 class ParametrosTransferencia extends ParametrosConsultaDaypag
 {

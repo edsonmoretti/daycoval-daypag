@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Objects;
+namespace Daypag\Objects;
 
-use App\Enums\CotaIpva;
+use Daypag\Enums\CotaIpva;
 
 class Ipva
 {

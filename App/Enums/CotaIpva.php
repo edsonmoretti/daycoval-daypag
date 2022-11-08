@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Enums;
+namespace Daypag\Enums;
 
 enum CotaIpva: int
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Enums;
+namespace Daypag\Enums;
 /**
  * Forma de Pagamento = “D” - Débito em Conta ou “C”
  * - Troca de Cheque (Caso não seja preenchida, a

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Exceptions;
+namespace Daypag\Exceptions;
 
 class DaypagException extends \Exception
 {

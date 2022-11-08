@@ -1,24 +1,24 @@
 <?php
 
-namespace App;
+namespace Daypag;
 
-use App\Enums\Ambiente;
-use App\Enums\VersaoApi;
-use App\Exceptions\DaypagException;
-use App\HttpClient\Http;
-use App\Objects\DebitoResult;
-use App\Objects\Parametros\ParametrosConsultaDaypag;
-use App\Objects\Parametros\ParametrosDpvat;
-use App\Objects\Parametros\ParametrosIpva;
-use App\Objects\Parametros\ParametrosLicenciamento;
-use App\Objects\Parametros\ParametrosLicenciamentoETransferencia;
-use App\Objects\Parametros\ParametrosMultasDeTransito;
-use App\Objects\Parametros\ParametrosMultasRenainf;
-use App\Objects\Parametros\ParametrosPagamentoDeDebitos;
-use App\Objects\Parametros\ParametrosPrimeiroRegistro;
-use App\Objects\Parametros\ParametrosSegundaViaDeTransferencia;
-use App\Objects\Parametros\ParametrosTaxasDetran;
-use App\Objects\Parametros\ParametrosTransferencia;
+use Daypag\Enums\Ambiente;
+use Daypag\Enums\VersaoApi;
+use Daypag\Exceptions\DaypagException;
+use Daypag\HttpClient\Http;
+use Daypag\Objects\DebitoResult;
+use Daypag\Objects\Parametros\ParametrosConsultaDaypag;
+use Daypag\Objects\Parametros\ParametrosDpvat;
+use Daypag\Objects\Parametros\ParametrosIpva;
+use Daypag\Objects\Parametros\ParametrosLicenciamento;
+use Daypag\Objects\Parametros\ParametrosLicenciamentoETransferencia;
+use Daypag\Objects\Parametros\ParametrosMultasDeTransito;
+use Daypag\Objects\Parametros\ParametrosMultasRenainf;
+use Daypag\Objects\Parametros\ParametrosPagamentoDeDebitos;
+use Daypag\Objects\Parametros\ParametrosPrimeiroRegistro;
+use Daypag\Objects\Parametros\ParametrosSegundaViaDeTransferencia;
+use Daypag\Objects\Parametros\ParametrosTaxasDetran;
+use Daypag\Objects\Parametros\ParametrosTransferencia;
 
 class Daypag
 {

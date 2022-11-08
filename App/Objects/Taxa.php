@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Objects;
+namespace Daypag\Objects;
 
 class Taxa
 {

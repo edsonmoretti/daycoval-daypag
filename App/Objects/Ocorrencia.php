@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Objects;
+namespace Daypag\Objects;
 class Ocorrencia
 {
     public function __construct(private readonly string $codOcorrencia,

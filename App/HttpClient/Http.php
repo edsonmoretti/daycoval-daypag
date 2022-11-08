@@ -1,6 +1,6 @@
 <?php
 
-namespace App\HttpClient;
+namespace Daypag\HttpClient;
 
 class Http
 {
