@@ -5,8 +5,8 @@ namespace Daypag\Objects;
 class OrgaoAutuador
 {
     public function __construct(
-        private readonly string $codOrgaoAutuador,
-        private readonly string $nome,
+        public readonly string $CodOrgaoAutuador,
+        public readonly string $Nome,
     )
     {
     }
@@ -16,7 +16,7 @@ class OrgaoAutuador
      */
     public function getNome(): string
     {
-        return $this->nome;
+        return $this->Nome;
     }
 
     /**
@@ -24,6 +24,6 @@ class OrgaoAutuador
      */
     public function getCodOrgaoAutuador(): string
     {
-        return $this->codOrgaoAutuador;
+        return $this->CodOrgaoAutuador;
     }
 }

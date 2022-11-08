@@ -7,8 +7,8 @@ use Daypag\Enums\TipoRetorno;
 class Retorno
 {
     public function __construct(
-        private readonly TipoRetorno $tipoRetorno,
-        private readonly string      $mensagem
+        public readonly TipoRetorno $TipoRetorno,
+        public readonly string $Mensagem
     )
     {
     }
@@ -18,7 +18,7 @@ class Retorno
      */
     public function getMensagem(): string
     {
-        return $this->mensagem;
+        return $this->Mensagem;
     }
 
     /**
@@ -26,6 +26,6 @@ class Retorno
      */
     public function getTipoRetorno(): TipoRetorno
     {
-        return $this->tipoRetorno;
+        return $this->TipoRetorno;
     }
 }

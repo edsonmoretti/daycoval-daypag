@@ -6,7 +6,6 @@ class Http
 {
     public static function post(string $url, array $data)
     {
-        echo json_encode($data);
         $ch = curl_init($url);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data));

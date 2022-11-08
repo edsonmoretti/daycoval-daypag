@@ -4,16 +4,16 @@ namespace Daypag\Objects;
 
 class Multa
 {
-    private string $aiip;
-    private string $guia;
-    private string $codSegmento;
-    private string $codEmpresaOrgao;
-    private string $dataInfracao;
-    private Municipio $municipio;
-    private Enquadramento $enquadramento;
-    private string $dataVencimento;
-    private float $valor;
-    private OrgaoAutuador $orgaoAutuador;
+    public string $Aiip;
+    public string $Guia;
+    public string $CodSegmento;
+    public string $CodEmpresaOrgao;
+    public string $DataInfracao;
+    public Municipio $Municipio;
+    public Enquadramento $Enquadramento;
+    public string $DataVencimento;
+    public float $Valor;
+    public OrgaoAutuador $OrgaoAutuador;
 
     public static function fromArray(array $multaRenainfDados): Multa
     {
@@ -36,15 +36,15 @@ class Multa
      */
     public function getAiip(): string
     {
-        return $this->aiip;
+        return $this->Aiip;
     }
 
     /**
-     * @param string $aiip
+     * @param string $Aiip
      */
-    public function setAiip(string $aiip): void
+    public function setAiip(string $Aiip): void
     {
-        $this->aiip = $aiip;
+        $this->Aiip = $Aiip;
     }
 
     /**
@@ -52,15 +52,15 @@ class Multa
      */
     public function getGuia(): string
     {
-        return $this->guia;
+        return $this->Guia;
     }
 
     /**
-     * @param string $guia
+     * @param string $Guia
      */
-    public function setGuia(string $guia): void
+    public function setGuia(string $Guia): void
     {
-        $this->guia = $guia;
+        $this->Guia = $Guia;
     }
 
     /**
@@ -68,15 +68,15 @@ class Multa
      */
     public function getCodSegmento(): string
     {
-        return $this->codSegmento;
+        return $this->CodSegmento;
     }
 
     /**
-     * @param string $codSegmento
+     * @param string $CodSegmento
      */
-    public function setCodSegmento(string $codSegmento): void
+    public function setCodSegmento(string $CodSegmento): void
     {
-        $this->codSegmento = $codSegmento;
+        $this->CodSegmento = $CodSegmento;
     }
 
     /**
@@ -84,15 +84,15 @@ class Multa
      */
     public function getCodEmpresaOrgao(): string
     {
-        return $this->codEmpresaOrgao;
+        return $this->CodEmpresaOrgao;
     }
 
     /**
-     * @param string $codEmpresaOrgao
+     * @param string $CodEmpresaOrgao
      */
-    public function setCodEmpresaOrgao(string $codEmpresaOrgao): void
+    public function setCodEmpresaOrgao(string $CodEmpresaOrgao): void
     {
-        $this->codEmpresaOrgao = $codEmpresaOrgao;
+        $this->CodEmpresaOrgao = $CodEmpresaOrgao;
     }
 
     /**
@@ -100,15 +100,15 @@ class Multa
      */
     public function getDataInfracao(): string
     {
-        return $this->dataInfracao;
+        return $this->DataInfracao;
     }
 
     /**
-     * @param string $dataInfracao
+     * @param string $DataInfracao
      */
-    public function setDataInfracao(string $dataInfracao): void
+    public function setDataInfracao(string $DataInfracao): void
     {
-        $this->dataInfracao = $dataInfracao;
+        $this->DataInfracao = $DataInfracao;
     }
 
     /**
@@ -116,15 +116,15 @@ class Multa
      */
     public function getMunicipio(): Municipio
     {
-        return $this->municipio;
+        return $this->Municipio;
     }
 
     /**
-     * @param Municipio $municipio
+     * @param Municipio $Municipio
      */
-    public function setMunicipio(Municipio $municipio): void
+    public function setMunicipio(Municipio $Municipio): void
     {
-        $this->municipio = $municipio;
+        $this->Municipio = $Municipio;
     }
 
     /**
@@ -132,15 +132,15 @@ class Multa
      */
     public function getEnquadramento(): Enquadramento
     {
-        return $this->enquadramento;
+        return $this->Enquadramento;
     }
 
     /**
-     * @param Enquadramento $enquadramento
+     * @param Enquadramento $Enquadramento
      */
-    public function setEnquadramento(Enquadramento $enquadramento): void
+    public function setEnquadramento(Enquadramento $Enquadramento): void
     {
-        $this->enquadramento = $enquadramento;
+        $this->Enquadramento = $Enquadramento;
     }
 
     /**
@@ -148,15 +148,15 @@ class Multa
      */
     public function getDataVencimento(): string
     {
-        return $this->dataVencimento;
+        return $this->DataVencimento;
     }
 
     /**
-     * @param string $dataVencimento
+     * @param string $DataVencimento
      */
-    public function setDataVencimento(string $dataVencimento): void
+    public function setDataVencimento(string $DataVencimento): void
     {
-        $this->dataVencimento = $dataVencimento;
+        $this->DataVencimento = $DataVencimento;
     }
 
     /**
@@ -164,15 +164,15 @@ class Multa
      */
     public function getValor(): float
     {
-        return $this->valor;
+        return $this->Valor;
     }
 
     /**
-     * @param float $valor
+     * @param float $Valor
      */
-    public function setValor(float $valor): void
+    public function setValor(float $Valor): void
     {
-        $this->valor = $valor;
+        $this->Valor = $Valor;
     }
 
     /**
@@ -180,14 +180,14 @@ class Multa
      */
     public function getOrgaoAutuador(): OrgaoAutuador
     {
-        return $this->orgaoAutuador;
+        return $this->OrgaoAutuador;
     }
 
     /**
-     * @param OrgaoAutuador $orgaoAutuador
+     * @param OrgaoAutuador $OrgaoAutuador
      */
-    public function setOrgaoAutuador(OrgaoAutuador $orgaoAutuador): void
+    public function setOrgaoAutuador(OrgaoAutuador $OrgaoAutuador): void
     {
-        $this->orgaoAutuador = $orgaoAutuador;
+        $this->OrgaoAutuador = $OrgaoAutuador;
     }
 }

@@ -5,8 +5,8 @@ namespace Daypag\Objects;
 class Enquadramento
 {
     public function __construct(
-        private readonly string $codEnquadramento,
-        private readonly string $descricao
+        public readonly string $CodEnquadramento,
+        public readonly string $Descricao
     )
     {
     }
@@ -16,7 +16,7 @@ class Enquadramento
      */
     public function getDescricao()
     {
-        return $this->descricao;
+        return $this->Descricao;
     }
 
     /**
@@ -24,6 +24,6 @@ class Enquadramento
      */
     public function getCodEnquadramento()
     {
-        return $this->codEnquadramento;
+        return $this->CodEnquadramento;
     }
 }

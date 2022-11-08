@@ -6,9 +6,9 @@ use Daypag\Enums\CotaIpva;
 
 class Ipva
 {
-    public function __construct(private readonly float    $valor,
-                                private readonly string   $exercicio,
-                                private readonly CotaIpva $cotaIpva
+    public function __construct(public readonly float    $Valor,
+                                public readonly string   $Exercicio,
+                                public readonly CotaIpva $CotaIpva
     )
     {
     }
@@ -18,7 +18,7 @@ class Ipva
      */
     public function getValor()
     {
-        return $this->valor;
+        return $this->Valor;
     }
 
     /**
@@ -26,7 +26,7 @@ class Ipva
      */
     public function getCotaIpva(): CotaIpva
     {
-        return $this->cotaIpva;
+        return $this->CotaIpva;
     }
 
     /**
@@ -34,6 +34,6 @@ class Ipva
      */
     public function getExercicio()
     {
-        return $this->exercicio;
+        return $this->Exercicio;
     }
 }

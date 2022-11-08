@@ -74,12 +74,12 @@ class Daypag
         $listaDebitos = [];
         if (isset($serializedObject['ListaDebitos'])) {
             foreach ($serializedObject['ListaDebitos'] as $debito) {
-                $listaDebitos[] = new DebitoResult($debito);
+                $listaDebitos['ListaDebitos'][] = new DebitoResult($debito);
             }
         }
         if (isset($serializedObject['DebitoResultDto'])) {
             foreach ($serializedObject['DebitoResultDto'] as $debito) {
-                $listaDebitos[] = new DebitoResult($debito);
+                $listaDebitos['DebitoResultDto'][] = new DebitoResult($debito);
             }
         }
         return $listaDebitos;

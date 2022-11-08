@@ -8,11 +8,11 @@ use Daypag\Enums\TipoVeiculo;
 class Dpvat
 {
     public function __construct(
-        private readonly float       $valor,
-        private readonly string      $exercicio,
-        private readonly CotaDpvat   $cotaIpva,
-        private readonly string      $categoriaDpvat,
-        private readonly TipoVeiculo $tipoVeiculo
+        public readonly float       $Valor,
+        public readonly string      $Exercicio,
+        public readonly CotaDpvat   $CotaIpva,
+        public readonly string      $CategoriaDpvat,
+        public readonly TipoVeiculo $TipoVeiculo
     )
     {
     }
@@ -22,7 +22,7 @@ class Dpvat
      */
     public function getExercicio(): string
     {
-        return $this->exercicio;
+        return $this->Exercicio;
     }
 
     /**
@@ -30,7 +30,7 @@ class Dpvat
      */
     public function getCotaIpva(): CotaDpvat
     {
-        return $this->cotaIpva;
+        return $this->CotaIpva;
     }
 
     /**
@@ -38,7 +38,7 @@ class Dpvat
      */
     public function getValor(): float
     {
-        return $this->valor;
+        return $this->Valor;
     }
 
     /**
@@ -46,7 +46,7 @@ class Dpvat
      */
     public function getCategoriaDpvat(): string
     {
-        return $this->categoriaDpvat;
+        return $this->CategoriaDpvat;
     }
 
     /**
@@ -54,6 +54,6 @@ class Dpvat
      */
     public function getTipoVeiculo(): TipoVeiculo
     {
-        return $this->tipoVeiculo;
+        return $this->TipoVeiculo;
     }
 }

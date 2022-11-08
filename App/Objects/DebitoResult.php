@@ -12,48 +12,48 @@ use Daypag\Enums\TipoVeiculo;
 
 class DebitoResult
 {
-    private ?string $renavan;
-    private ?string $placa;
-    private ?string $documento;
-    private ?string $exercicio;
-    private ?string $nome;
-    private ?Municipio $municipio;
-    private CodServico $codServico;
-    private ?string $codSubServico;
-    private TipoConsulta $tipoConsulta;
-    private ?Ocorrencia $ocorrencia;
-    private Retorno $retorno;
-    private string $dataMovimento;
-    private ?\DateTime $dataHoraConsulta;
-    private ?float $valorTotal;
-    private ?Correio $correio;
-    private ?float $valorTaxas;
-    private ?float $valorIpvas;
-    private ?float $valorDpvats;
-    private ?float $valorMultas;
-    private ?float $valorMultasRenainf;
+    public ?string $Renavan;
+    public ?string $Placa;
+    public ?string $Documento;
+    public ?string $Exercicio;
+    public ?string $Nome;
+    public ?Municipio $Municipio;
+    public CodServico $CodServico;
+    public ?string $CodSubServico;
+    public TipoConsulta $TipoConsulta;
+    public ?Ocorrencia $Ocorrencia;
+    public Retorno $Retorno;
+    public string $DataMovimento;
+    public ?\DateTime $DataHoraConsulta;
+    public ?float $ValorTotal;
+    public ?Correio $Correio;
+    public ?float $ValorTaxas;
+    public ?float $ValorIpvas;
+    public ?float $ValorDpvats;
+    public ?float $ValorMultas;
+    public ?float $ValorMultasRenainf;
     /**
-     * @var $taxas Taxa[]
+     * @var $Taxas Taxa[]
      */
-    private array $taxas;
-    private IpvaAtual $ipvaAtual;
+    public array $Taxas;
+    public IpvaAtual $IpvaAtual;
     /**
-     * @var $ipvas Ipva[]
+     * @var $Ipvas Ipva[]
      */
-    private array $ipvas;
-    private DpvatAtual $dpvatAtual;
+    public array $Ipvas;
+    public DpvatAtual $DpvatAtual;
     /**
-     * @var $dpvats Dpvat[]
+     * @var $Dpvats Dpvat[]
      */
-    private array $dpvats;
+    public array $Dpvats;
     /**
-     * @var $multas Multa[]
+     * @var $Multas Multa[]
      */
-    private array $multas;
+    public array $Multas;
     /**
-     * @var $multasRenainf Multa[]
+     * @var $MultasRenainf Multa[]
      */
-    private array $multasRenainf;
+    public array $MultasRenainf;
 
     public function __construct(\stdClass|array $data)
     {
@@ -62,81 +62,81 @@ class DebitoResult
             $data = json_decode(json_encode($data), true);
         }
 
-        $this->renavan = $data['Renavan'] ?? null;
-        $this->placa = $data['Placa'] ?? null;
-        $this->documento = $data['Documento'] ?? null;
-        $this->exercicio = $data['Exercicio'] ?? null;
-        $this->nome = $data['Nome'] ?? null;
-        $this->municipio = isset($data['Municipio']) ? new Municipio($data['Municipio']['CodFederal'], $data['Municipio']['CodEstadual'], $data['Municipio']['Nome']) : null;
-        $this->codServico = CodServico::valueOf($data['CodServico']);
-        $this->codSubServico = $data['CodSubServico'] ?? null;
-        $this->tipoConsulta = TipoConsulta::valueOf($data['TipoConsulta']);
-        $this->ocorrencia = isset($data['Ocorrencia']) ? new Ocorrencia($data['Ocorrencia']['CodOcorrencia'], $data['Ocorrencia']['Descricao']) : null;
-        $this->retorno = new Retorno(TipoRetorno::valueOf($data['Retorno']['TipoRetorno']), $data['Retorno']['Mensagem']);
-        $this->dataMovimento = $data['DataMovimento'];
-        $this->dataHoraConsulta = isset($data['DataHoraConsulta']) ? new \DateTime($data['DataHoraConsulta']) : null;
-        $this->valorTotal = $data['ValorTotal'] ?? null;
-        $this->correio = isset($data['Correio']) ? new Correio($data['Correio']['Valor'], TipoCorreio::valueOf($data['Correio']['TipoCorreio'])) : null;
-        $this->valorTaxas = $data['ValorTaxas'] ?? null;
-        $this->valorIpvas = $data['ValorIpvas'] ?? null;
-        $this->valorDpvats = $data['ValorDpvats'] ?? null;
-        $this->valorMultas = $data['ValorMultas'] ?? null;
-        $this->valorMultasRenainf = $data['ValorMultasRenainf'] ?? null;
-        $this->taxas = [];
+        $this->Renavan = $data['Renavan'] ?? null;
+        $this->Placa = $data['Placa'] ?? null;
+        $this->Documento = $data['Documento'] ?? null;
+        $this->Exercicio = $data['Exercicio'] ?? null;
+        $this->Nome = $data['Nome'] ?? null;
+        $this->Municipio = isset($data['Municipio']) ? new Municipio($data['Municipio']['CodFederal'], $data['Municipio']['CodEstadual'], $data['Municipio']['Nome']) : null;
+        $this->CodServico = CodServico::valueOf($data['CodServico']);
+        $this->CodSubServico = $data['CodSubServico'] ?? null;
+        $this->TipoConsulta = TipoConsulta::valueOf($data['TipoConsulta']);
+        $this->Ocorrencia = isset($data['Ocorrencia']) ? new Ocorrencia($data['Ocorrencia']['CodOcorrencia'], $data['Ocorrencia']['Descricao']) : null;
+        $this->Retorno = new Retorno(TipoRetorno::valueOf($data['Retorno']['TipoRetorno']), $data['Retorno']['Mensagem']);
+        $this->DataMovimento = $data['DataMovimento'];
+        $this->DataHoraConsulta = isset($data['DataHoraConsulta']) ? new \DateTime($data['DataHoraConsulta']) : null;
+        $this->ValorTotal = $data['ValorTotal'] ?? null;
+        $this->Correio = isset($data['Correio']) ? new Correio($data['Correio']['Valor'], TipoCorreio::valueOf($data['Correio']['TipoCorreio'])) : null;
+        $this->ValorTaxas = $data['ValorTaxas'] ?? null;
+        $this->ValorIpvas = $data['ValorIpvas'] ?? null;
+        $this->ValorDpvats = $data['ValorDpvats'] ?? null;
+        $this->ValorMultas = $data['ValorMultas'] ?? null;
+        $this->ValorMultasRenainf = $data['ValorMultasRenainf'] ?? null;
+        $this->Taxas = [];
         foreach ($data['Taxas'] ?? [] as $taxa) {
-            $this->taxas[] = new Taxa($taxa['Valor'], $taxa['Descricao'], $taxa['Ano']);
+            $this->Taxas[] = new Taxa($taxa['Valor'], $taxa['Descricao'], $taxa['Ano']);
         }
 
         /* IVPA */
         if (isset($data['IpvaAtual'])) {
-            $this->ipvaAtual = new IpvaAtual();
-            $this->ipvaAtual->setExercicio($data['IpvaAtual']['Exercicio']);
-            $this->ipvaAtual->setDataVencimentoComDesconto($data['IpvaAtual']['DataVencimentoComDesconto']);
-            $this->ipvaAtual->setValorComDesconto($data['IpvaAtual']['ValorComDesconto']);
-            $this->ipvaAtual->setDataVencimentoSemDesconto($data['IpvaAtual']['DataVencimentoSemDesconto']);
-            $this->ipvaAtual->setValorSemDesconto($data['IpvaAtual']['ValorSemDesconto']);
-            $this->ipvaAtual->setDataVencimentoParcela1($data['IpvaAtual']['DataVencimentoParcela1']);
-            $this->ipvaAtual->setValorParcela1($data['IpvaAtual']['ValorParcela1']);
-            $this->ipvaAtual->setDataVencimentoParcela2($data['IpvaAtual']['DataVencimentoParcela2']);
-            $this->ipvaAtual->setValorParcela2($data['IpvaAtual']['ValorParcela2']);
-            $this->ipvaAtual->setDataVencimentoParcela3($data['IpvaAtual']['DataVencimentoParcela3']);
-            $this->ipvaAtual->setValorParcela3($data['IpvaAtual']['ValorParcela3']);
-            $this->ipvaAtual->setDataVencimentoParcela4($data['IpvaAtual']['DataVencimentoParcela4']);
-            $this->ipvaAtual->setValorParcela4($data['IpvaAtual']['ValorParcela4']);
-            $this->ipvaAtual->setDataVencimentoParcela5($data['IpvaAtual']['DataVencimentoParcela5']);
-            $this->ipvaAtual->setValorParcela5($data['IpvaAtual']['ValorParcela5']);
-            $this->ipvaAtual->setDataVencimentoParcela6($data['IpvaAtual']['DataVencimentoParcela6']);
-            $this->ipvaAtual->setValorParcela6($data['IpvaAtual']['ValorParcela6']);
+            $this->IpvaAtual = new IpvaAtual();
+            $this->IpvaAtual->setExercicio($data['IpvaAtual']['Exercicio']);
+            $this->IpvaAtual->setDataVencimentoComDesconto($data['IpvaAtual']['DataVencimentoComDesconto']);
+            $this->IpvaAtual->setValorComDesconto($data['IpvaAtual']['ValorComDesconto']);
+            $this->IpvaAtual->setDataVencimentoSemDesconto($data['IpvaAtual']['DataVencimentoSemDesconto']);
+            $this->IpvaAtual->setValorSemDesconto($data['IpvaAtual']['ValorSemDesconto']);
+            $this->IpvaAtual->setDataVencimentoParcela1($data['IpvaAtual']['DataVencimentoParcela1']);
+            $this->IpvaAtual->setValorParcela1($data['IpvaAtual']['ValorParcela1']);
+            $this->IpvaAtual->setDataVencimentoParcela2($data['IpvaAtual']['DataVencimentoParcela2']);
+            $this->IpvaAtual->setValorParcela2($data['IpvaAtual']['ValorParcela2']);
+            $this->IpvaAtual->setDataVencimentoParcela3($data['IpvaAtual']['DataVencimentoParcela3']);
+            $this->IpvaAtual->setValorParcela3($data['IpvaAtual']['ValorParcela3']);
+            $this->IpvaAtual->setDataVencimentoParcela4($data['IpvaAtual']['DataVencimentoParcela4']);
+            $this->IpvaAtual->setValorParcela4($data['IpvaAtual']['ValorParcela4']);
+            $this->IpvaAtual->setDataVencimentoParcela5($data['IpvaAtual']['DataVencimentoParcela5']);
+            $this->IpvaAtual->setValorParcela5($data['IpvaAtual']['ValorParcela5']);
+            $this->IpvaAtual->setDataVencimentoParcela6($data['IpvaAtual']['DataVencimentoParcela6']);
+            $this->IpvaAtual->setValorParcela6($data['IpvaAtual']['ValorParcela6']);
         }
-        $this->ipvas = [];
+        $this->Ipvas = [];
         foreach ($data['Ipvas'] ?? [] as $ipva) {
-            $this->ipvas[] = new Ipva($ipva['Valor'], $ipva['Exercicio'], CotaIpva::valueOf($ipva['CotaIpva']));
+            $this->Ipvas[] = new Ipva($ipva['Valor'], $ipva['Exercicio'], CotaIpva::valueOf($ipva['CotaIpva']));
         }
 
         /* DPVAT */
         if (isset($data['DpvatAtual'])) {
-            $this->dpvatAtual = new DpvatAtual();
-            $this->dpvatAtual->setValor($data['DpvatAtual']['Valor']);
-            $this->dpvatAtual->setExercicio($data['DpvatAtual']['Exercicio']);
-            $this->dpvatAtual->setCategoriaDpvat($data['DpvatAtual']['CategoriaDpvat']);
-            $this->dpvatAtual->setTipoVeiculo(TipoVeiculo::valueOf($data['DpvatAtual']['TipoVeiculo']));
-            $this->dpvatAtual->setDataVencimento($data['DpvatAtual']['DataVencimento']);
-            $this->dpvatAtual->setDataVencimentoParcela1($data['DpvatAtual']['DataVencimentoParcela1']);
-            $this->dpvatAtual->setValorParcela1($data['DpvatAtual']['ValorParcela1']);
-            $this->dpvatAtual->setDataVencimentoParcela2($data['DpvatAtual']['DataVencimentoParcela2']);
-            $this->dpvatAtual->setValorParcela2($data['DpvatAtual']['ValorParcela2']);
-            $this->dpvatAtual->setDataVencimentoParcela3($data['DpvatAtual']['DataVencimentoParcela3']);
-            $this->dpvatAtual->setValorParcela3($data['DpvatAtual']['ValorParcela3']);
-            $this->dpvatAtual->setDataVencimentoParcela4($data['DpvatAtual']['DataVencimentoParcela4']);
-            $this->dpvatAtual->setValorParcela4($data['DpvatAtual']['ValorParcela4']);
-            $this->dpvatAtual->setDataVencimentoParcela5($data['DpvatAtual']['DataVencimentoParcela5']);
-            $this->dpvatAtual->setValorParcela5($data['DpvatAtual']['ValorParcela5']);
-            $this->dpvatAtual->setDataVencimentoParcela6($data['DpvatAtual']['DataVencimentoParcela6']);
-            $this->dpvatAtual->setValorParcela6($data['DpvatAtual']['ValorParcela6']);
+            $this->DpvatAtual = new DpvatAtual();
+            $this->DpvatAtual->setValor($data['DpvatAtual']['Valor']);
+            $this->DpvatAtual->setExercicio($data['DpvatAtual']['Exercicio']);
+            $this->DpvatAtual->setCategoriaDpvat($data['DpvatAtual']['CategoriaDpvat']);
+            $this->DpvatAtual->setTipoVeiculo(TipoVeiculo::valueOf($data['DpvatAtual']['TipoVeiculo']));
+            $this->DpvatAtual->setDataVencimento($data['DpvatAtual']['DataVencimento']);
+            $this->DpvatAtual->setDataVencimentoParcela1($data['DpvatAtual']['DataVencimentoParcela1']);
+            $this->DpvatAtual->setValorParcela1($data['DpvatAtual']['ValorParcela1']);
+            $this->DpvatAtual->setDataVencimentoParcela2($data['DpvatAtual']['DataVencimentoParcela2']);
+            $this->DpvatAtual->setValorParcela2($data['DpvatAtual']['ValorParcela2']);
+            $this->DpvatAtual->setDataVencimentoParcela3($data['DpvatAtual']['DataVencimentoParcela3']);
+            $this->DpvatAtual->setValorParcela3($data['DpvatAtual']['ValorParcela3']);
+            $this->DpvatAtual->setDataVencimentoParcela4($data['DpvatAtual']['DataVencimentoParcela4']);
+            $this->DpvatAtual->setValorParcela4($data['DpvatAtual']['ValorParcela4']);
+            $this->DpvatAtual->setDataVencimentoParcela5($data['DpvatAtual']['DataVencimentoParcela5']);
+            $this->DpvatAtual->setValorParcela5($data['DpvatAtual']['ValorParcela5']);
+            $this->DpvatAtual->setDataVencimentoParcela6($data['DpvatAtual']['DataVencimentoParcela6']);
+            $this->DpvatAtual->setValorParcela6($data['DpvatAtual']['ValorParcela6']);
         }
-        $this->dpvats = [];
+        $this->Dpvats = [];
         foreach ($data['Dpvats'] ?? [] as $dpvat) {
-            $this->dpvats[] = new Dpvat(
+            $this->Dpvats[] = new Dpvat(
                 $dpvat['Valor'],
                 $dpvat['Exercicio'],
                 CotaDpvat::valueOf($dpvat['CotaDpvat']),
@@ -146,13 +146,13 @@ class DebitoResult
         }
 
         /* MULTAS */
-        $this->multas = [];
+        $this->Multas = [];
         foreach ($data['Multas'] ?? [] as $multaDados) {
-            $this->multas[] = Multa::fromArray($multaDados);
+            $this->Multas[] = Multa::fromArray($multaDados);
         }
-        $this->multasRenainf = [];
+        $this->MultasRenainf = [];
         foreach ($data['MultasRenainf'] ?? [] as $multaRenainfDados) {
-            $this->multasRenainf[] = Multa::fromArray($multaRenainfDados);
+            $this->MultasRenainf[] = Multa::fromArray($multaRenainfDados);
         }
     }
 
@@ -161,7 +161,7 @@ class DebitoResult
      */
     public function getRenavan(): ?string
     {
-        return $this->renavan;
+        return $this->Renavan;
     }
 
     /**
@@ -169,7 +169,7 @@ class DebitoResult
      */
     public function getPlaca(): ?string
     {
-        return $this->placa;
+        return $this->Placa;
     }
 
     /**
@@ -177,7 +177,7 @@ class DebitoResult
      */
     public function getDocumento(): ?string
     {
-        return $this->documento;
+        return $this->Documento;
     }
 
     /**
@@ -185,7 +185,7 @@ class DebitoResult
      */
     public function getExercicio(): ?string
     {
-        return $this->exercicio;
+        return $this->Exercicio;
     }
 
     /**
@@ -193,7 +193,7 @@ class DebitoResult
      */
     public function getNome(): ?string
     {
-        return $this->nome;
+        return $this->Nome;
     }
 
     /**
@@ -201,7 +201,7 @@ class DebitoResult
      */
     public function getMunicipio(): ?Municipio
     {
-        return $this->municipio;
+        return $this->Municipio;
     }
 
     /**
@@ -209,7 +209,7 @@ class DebitoResult
      */
     public function getCodServico(): CodServico
     {
-        return $this->codServico;
+        return $this->CodServico;
     }
 
     /**
@@ -217,7 +217,7 @@ class DebitoResult
      */
     public function getCodSubServico(): ?string
     {
-        return $this->codSubServico;
+        return $this->CodSubServico;
     }
 
     /**
@@ -225,7 +225,7 @@ class DebitoResult
      */
     public function getTipoConsulta(): TipoConsulta
     {
-        return $this->tipoConsulta;
+        return $this->TipoConsulta;
     }
 
     /**
@@ -233,7 +233,7 @@ class DebitoResult
      */
     public function getOcorrencia(): ?Ocorrencia
     {
-        return $this->ocorrencia;
+        return $this->Ocorrencia;
     }
 
     /**
@@ -241,7 +241,7 @@ class DebitoResult
      */
     public function getRetorno(): Retorno
     {
-        return $this->retorno;
+        return $this->Retorno;
     }
 
     /**
@@ -249,7 +249,7 @@ class DebitoResult
      */
     public function getDataMovimento(): string
     {
-        return $this->dataMovimento;
+        return $this->DataMovimento;
     }
 
     /**
@@ -257,7 +257,7 @@ class DebitoResult
      */
     public function getDataHoraConsulta(): ?\DateTime
     {
-        return $this->dataHoraConsulta;
+        return $this->DataHoraConsulta;
     }
 
     /**
@@ -265,7 +265,7 @@ class DebitoResult
      */
     public function getValorTotal(): ?float
     {
-        return $this->valorTotal;
+        return $this->ValorTotal;
     }
 
     /**
@@ -273,7 +273,7 @@ class DebitoResult
      */
     public function getCorreio(): ?Correio
     {
-        return $this->correio;
+        return $this->Correio;
     }
 
     /**
@@ -281,7 +281,7 @@ class DebitoResult
      */
     public function getValorTaxas(): ?float
     {
-        return $this->valorTaxas;
+        return $this->ValorTaxas;
     }
 
     /**
@@ -289,7 +289,7 @@ class DebitoResult
      */
     public function getValorIpvas(): ?float
     {
-        return $this->valorIpvas;
+        return $this->ValorIpvas;
     }
 
     /**
@@ -297,7 +297,7 @@ class DebitoResult
      */
     public function getValorDpvats(): ?float
     {
-        return $this->valorDpvats;
+        return $this->ValorDpvats;
     }
 
     /**
@@ -305,7 +305,7 @@ class DebitoResult
      */
     public function getValorMultas(): ?float
     {
-        return $this->valorMultas;
+        return $this->ValorMultas;
     }
 
     /**
@@ -313,7 +313,7 @@ class DebitoResult
      */
     public function getValorMultasRenainf(): ?float
     {
-        return $this->valorMultasRenainf;
+        return $this->ValorMultasRenainf;
     }
 
     /**
@@ -321,7 +321,7 @@ class DebitoResult
      */
     public function getTaxas(): array
     {
-        return $this->taxas;
+        return $this->Taxas;
     }
 
     /**
@@ -329,7 +329,7 @@ class DebitoResult
      */
     public function getIpvaAtual(): IpvaAtual
     {
-        return $this->ipvaAtual;
+        return $this->IpvaAtual;
     }
 
     /**
@@ -337,7 +337,7 @@ class DebitoResult
      */
     public function getIpvas(): array
     {
-        return $this->ipvas;
+        return $this->Ipvas;
     }
 
     /**
@@ -345,7 +345,7 @@ class DebitoResult
      */
     public function getDpvatAtual(): DpvatAtual
     {
-        return $this->dpvatAtual;
+        return $this->DpvatAtual;
     }
 
     /**
@@ -353,7 +353,7 @@ class DebitoResult
      */
     public function getDpvats(): array
     {
-        return $this->dpvats;
+        return $this->Dpvats;
     }
 
     /**
@@ -361,7 +361,7 @@ class DebitoResult
      */
     public function getMultas(): array
     {
-        return $this->multas;
+        return $this->Multas;
     }
 
     /**
@@ -369,7 +369,7 @@ class DebitoResult
      */
     public function getMultasRenainf(): array
     {
-        return $this->multasRenainf;
+        return $this->MultasRenainf;
     }
 
     /**

@@ -1,10 +1,11 @@
 <?php
 
 namespace Daypag\Objects;
+
 class Ocorrencia
 {
-    public function __construct(private readonly string $codOcorrencia,
-                                private readonly string $descricao)
+    public function __construct(public readonly string $CodOcorrencia,
+                                public readonly string $Descricao)
     {
     }
 
@@ -13,7 +14,7 @@ class Ocorrencia
      */
     public function getDescricao(): string
     {
-        return $this->descricao;
+        return $this->Descricao;
     }
 
     /**
@@ -21,6 +22,6 @@ class Ocorrencia
      */
     public function getCodOcorrencia(): string
     {
-        return $this->codOcorrencia;
+        return $this->CodOcorrencia;
     }
 }

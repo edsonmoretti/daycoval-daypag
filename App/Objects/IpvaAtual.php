@@ -4,38 +4,38 @@ namespace Daypag\Objects;
 
 class IpvaAtual
 {
-    private float $exercicio;
-    private string $dataVencimentoComDesconto;
-    private float $valorComDesconto;
-    private string $dataVencimentoSemDesconto;
-    private float $valorSemDesconto;
-    private string $dataVencimentoParcela1;
-    private float $valorParcela1;
-    private string $dataVencimentoParcela2;
-    private float $valorParcela2;
-    private string $dataVencimentoParcela3;
-    private float $valorParcela3;
-    private string $dataVencimentoParcela4;
-    private float $valorParcela4;
-    private string $dataVencimentoParcela5;
-    private float $valorParcela5;
-    private string $dataVencimentoParcela6;
-    private float $valorParcela6;
+    public float $Exercicio;
+    public string $DataVencimentoComDesconto;
+    public float $ValorComDesconto;
+    public string $DataVencimentoSemDesconto;
+    public float $ValorSemDesconto;
+    public string $DataVencimentoParcela1;
+    public float $ValorParcela1;
+    public string $DataVencimentoParcela2;
+    public float $ValorParcela2;
+    public string $DataVencimentoParcela3;
+    public float $ValorParcela3;
+    public string $DataVencimentoParcela4;
+    public float $ValorParcela4;
+    public string $DataVencimentoParcela5;
+    public float $ValorParcela5;
+    public string $DataVencimentoParcela6;
+    public float $ValorParcela6;
 
     /**
      * @return float
      */
     public function getExercicio(): float
     {
-        return $this->exercicio;
+        return $this->Exercicio;
     }
 
     /**
-     * @param float $exercicio
+     * @param float $Exercicio
      */
-    public function setExercicio(float $exercicio): void
+    public function setExercicio(float $Exercicio): void
     {
-        $this->exercicio = $exercicio;
+        $this->Exercicio = $Exercicio;
     }
 
     /**
@@ -43,15 +43,15 @@ class IpvaAtual
      */
     public function getDataVencimentoComDesconto(): string
     {
-        return $this->dataVencimentoComDesconto;
+        return $this->DataVencimentoComDesconto;
     }
 
     /**
-     * @param string $dataVencimentoComDesconto
+     * @param string $DataVencimentoComDesconto
      */
-    public function setDataVencimentoComDesconto(string $dataVencimentoComDesconto): void
+    public function setDataVencimentoComDesconto(string $DataVencimentoComDesconto): void
     {
-        $this->dataVencimentoComDesconto = $dataVencimentoComDesconto;
+        $this->DataVencimentoComDesconto = $DataVencimentoComDesconto;
     }
 
     /**
@@ -59,15 +59,15 @@ class IpvaAtual
      */
     public function getValorComDesconto(): float
     {
-        return $this->valorComDesconto;
+        return $this->ValorComDesconto;
     }
 
     /**
-     * @param float $valorComDesconto
+     * @param float $ValorComDesconto
      */
-    public function setValorComDesconto(float $valorComDesconto): void
+    public function setValorComDesconto(float $ValorComDesconto): void
     {
-        $this->valorComDesconto = $valorComDesconto;
+        $this->ValorComDesconto = $ValorComDesconto;
     }
 
     /**
@@ -75,15 +75,15 @@ class IpvaAtual
      */
     public function getDataVencimentoSemDesconto(): string
     {
-        return $this->dataVencimentoSemDesconto;
+        return $this->DataVencimentoSemDesconto;
     }
 
     /**
-     * @param string $dataVencimentoSemDesconto
+     * @param string $DataVencimentoSemDesconto
      */
-    public function setDataVencimentoSemDesconto(string $dataVencimentoSemDesconto): void
+    public function setDataVencimentoSemDesconto(string $DataVencimentoSemDesconto): void
     {
-        $this->dataVencimentoSemDesconto = $dataVencimentoSemDesconto;
+        $this->DataVencimentoSemDesconto = $DataVencimentoSemDesconto;
     }
 
     /**
@@ -91,15 +91,15 @@ class IpvaAtual
      */
     public function getValorSemDesconto(): float
     {
-        return $this->valorSemDesconto;
+        return $this->ValorSemDesconto;
     }
 
     /**
-     * @param float $valorSemDesconto
+     * @param float $ValorSemDesconto
      */
-    public function setValorSemDesconto(float $valorSemDesconto): void
+    public function setValorSemDesconto(float $ValorSemDesconto): void
     {
-        $this->valorSemDesconto = $valorSemDesconto;
+        $this->ValorSemDesconto = $ValorSemDesconto;
     }
 
     /**
@@ -107,15 +107,15 @@ class IpvaAtual
      */
     public function getDataVencimentoParcela1(): string
     {
-        return $this->dataVencimentoParcela1;
+        return $this->DataVencimentoParcela1;
     }
 
     /**
-     * @param string $dataVencimentoParcela1
+     * @param string $DataVencimentoParcela1
      */
-    public function setDataVencimentoParcela1(string $dataVencimentoParcela1): void
+    public function setDataVencimentoParcela1(string $DataVencimentoParcela1): void
     {
-        $this->dataVencimentoParcela1 = $dataVencimentoParcela1;
+        $this->DataVencimentoParcela1 = $DataVencimentoParcela1;
     }
 
     /**
@@ -123,15 +123,15 @@ class IpvaAtual
      */
     public function getValorParcela1(): float
     {
-        return $this->valorParcela1;
+        return $this->ValorParcela1;
     }
 
     /**
-     * @param float $valorParcela1
+     * @param float $ValorParcela1
      */
-    public function setValorParcela1(float $valorParcela1): void
+    public function setValorParcela1(float $ValorParcela1): void
     {
-        $this->valorParcela1 = $valorParcela1;
+        $this->ValorParcela1 = $ValorParcela1;
     }
 
     /**
@@ -139,15 +139,15 @@ class IpvaAtual
      */
     public function getDataVencimentoParcela2(): string
     {
-        return $this->dataVencimentoParcela2;
+        return $this->DataVencimentoParcela2;
     }
 
     /**
-     * @param string $dataVencimentoParcela2
+     * @param string $DataVencimentoParcela2
      */
-    public function setDataVencimentoParcela2(string $dataVencimentoParcela2): void
+    public function setDataVencimentoParcela2(string $DataVencimentoParcela2): void
     {
-        $this->dataVencimentoParcela2 = $dataVencimentoParcela2;
+        $this->DataVencimentoParcela2 = $DataVencimentoParcela2;
     }
 
     /**
@@ -155,15 +155,15 @@ class IpvaAtual
      */
     public function getValorParcela2(): float
     {
-        return $this->valorParcela2;
+        return $this->ValorParcela2;
     }
 
     /**
-     * @param float $valorParcela2
+     * @param float $ValorParcela2
      */
-    public function setValorParcela2(float $valorParcela2): void
+    public function setValorParcela2(float $ValorParcela2): void
     {
-        $this->valorParcela2 = $valorParcela2;
+        $this->ValorParcela2 = $ValorParcela2;
     }
 
     /**
@@ -171,15 +171,15 @@ class IpvaAtual
      */
     public function getDataVencimentoParcela3(): string
     {
-        return $this->dataVencimentoParcela3;
+        return $this->DataVencimentoParcela3;
     }
 
     /**
-     * @param string $dataVencimentoParcela3
+     * @param string $DataVencimentoParcela3
      */
-    public function setDataVencimentoParcela3(string $dataVencimentoParcela3): void
+    public function setDataVencimentoParcela3(string $DataVencimentoParcela3): void
     {
-        $this->dataVencimentoParcela3 = $dataVencimentoParcela3;
+        $this->DataVencimentoParcela3 = $DataVencimentoParcela3;
     }
 
     /**
@@ -187,15 +187,15 @@ class IpvaAtual
      */
     public function getValorParcela3(): float
     {
-        return $this->valorParcela3;
+        return $this->ValorParcela3;
     }
 
     /**
-     * @param float $valorParcela3
+     * @param float $ValorParcela3
      */
-    public function setValorParcela3(float $valorParcela3): void
+    public function setValorParcela3(float $ValorParcela3): void
     {
-        $this->valorParcela3 = $valorParcela3;
+        $this->ValorParcela3 = $ValorParcela3;
     }
 
     /**
@@ -203,15 +203,15 @@ class IpvaAtual
      */
     public function getDataVencimentoParcela4(): string
     {
-        return $this->dataVencimentoParcela4;
+        return $this->DataVencimentoParcela4;
     }
 
     /**
-     * @param string $dataVencimentoParcela4
+     * @param string $DataVencimentoParcela4
      */
-    public function setDataVencimentoParcela4(string $dataVencimentoParcela4): void
+    public function setDataVencimentoParcela4(string $DataVencimentoParcela4): void
     {
-        $this->dataVencimentoParcela4 = $dataVencimentoParcela4;
+        $this->DataVencimentoParcela4 = $DataVencimentoParcela4;
     }
 
     /**
@@ -219,15 +219,15 @@ class IpvaAtual
      */
     public function getValorParcela4(): float
     {
-        return $this->valorParcela4;
+        return $this->ValorParcela4;
     }
 
     /**
-     * @param float $valorParcela4
+     * @param float $ValorParcela4
      */
-    public function setValorParcela4(float $valorParcela4): void
+    public function setValorParcela4(float $ValorParcela4): void
     {
-        $this->valorParcela4 = $valorParcela4;
+        $this->ValorParcela4 = $ValorParcela4;
     }
 
     /**
@@ -235,15 +235,15 @@ class IpvaAtual
      */
     public function getDataVencimentoParcela5(): string
     {
-        return $this->dataVencimentoParcela5;
+        return $this->DataVencimentoParcela5;
     }
 
     /**
-     * @param string $dataVencimentoParcela5
+     * @param string $DataVencimentoParcela5
      */
-    public function setDataVencimentoParcela5(string $dataVencimentoParcela5): void
+    public function setDataVencimentoParcela5(string $DataVencimentoParcela5): void
     {
-        $this->dataVencimentoParcela5 = $dataVencimentoParcela5;
+        $this->DataVencimentoParcela5 = $DataVencimentoParcela5;
     }
 
     /**
@@ -251,15 +251,15 @@ class IpvaAtual
      */
     public function getValorParcela5(): float
     {
-        return $this->valorParcela5;
+        return $this->ValorParcela5;
     }
 
     /**
-     * @param float $valorParcela5
+     * @param float $ValorParcela5
      */
-    public function setValorParcela5(float $valorParcela5): void
+    public function setValorParcela5(float $ValorParcela5): void
     {
-        $this->valorParcela5 = $valorParcela5;
+        $this->ValorParcela5 = $ValorParcela5;
     }
 
     /**
@@ -267,15 +267,15 @@ class IpvaAtual
      */
     public function getDataVencimentoParcela6(): string
     {
-        return $this->dataVencimentoParcela6;
+        return $this->DataVencimentoParcela6;
     }
 
     /**
-     * @param string $dataVencimentoParcela6
+     * @param string $DataVencimentoParcela6
      */
-    public function setDataVencimentoParcela6(string $dataVencimentoParcela6): void
+    public function setDataVencimentoParcela6(string $DataVencimentoParcela6): void
     {
-        $this->dataVencimentoParcela6 = $dataVencimentoParcela6;
+        $this->DataVencimentoParcela6 = $DataVencimentoParcela6;
     }
 
     /**
@@ -283,14 +283,14 @@ class IpvaAtual
      */
     public function getValorParcela6(): float
     {
-        return $this->valorParcela6;
+        return $this->ValorParcela6;
     }
 
     /**
-     * @param float $valorParcela6
+     * @param float $ValorParcela6
      */
-    public function setValorParcela6(float $valorParcela6): void
+    public function setValorParcela6(float $ValorParcela6): void
     {
-        $this->valorParcela6 = $valorParcela6;
+        $this->ValorParcela6 = $ValorParcela6;
     }
 }

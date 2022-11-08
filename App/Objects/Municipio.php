@@ -4,7 +4,7 @@ namespace Daypag\Objects;
 
 class Municipio
 {
-    public function __construct(private string $codFederal, private string $codEstadual, private string $nome)
+    public function __construct(public string $CodFederal, public string $CodEstadual, public string $Nome)
     {
     }
 
@@ -13,7 +13,7 @@ class Municipio
      */
     public function getCodEstadual(): string
     {
-        return $this->codEstadual;
+        return $this->CodEstadual;
     }
 
     /**
@@ -21,7 +21,7 @@ class Municipio
      */
     public function getCodFederal(): string
     {
-        return $this->codFederal;
+        return $this->CodFederal;
     }
 
     /**
@@ -29,6 +29,6 @@ class Municipio
      */
     public function getNome(): string
     {
-        return $this->nome;
+        return $this->Nome;
     }
 }
