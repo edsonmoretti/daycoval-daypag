@@ -36,10 +36,7 @@ $debitos = $daypag->consultarIpva(
 
 foreach ($debitos as $debito) {
     if ($debito->getRetorno()->getTipoRetorno() == \App\Enums\TipoRetorno::ERRO) {
-        echo '<hr>';
         echo $debito->getRetorno()->getMensagem();
-        echo '<hr>';
-        var_dump($debito);
     } else {
         echo 'else';
     }
